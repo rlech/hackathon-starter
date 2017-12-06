@@ -10,7 +10,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^2.1.2",
@@ -59,7 +61,8 @@
     "tumblr.js": "^1.1.1",
     "twilio": "^3.3.1-edge",
     "twit": "^2.2.5",
-    "validator": "^6.1.0"
+    "validator": "^6.1.0",
+    "snyk": "^1.53.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -82,5 +85,6 @@
       "no-console": 0,
       "no-plusplus": 0
     }
-  }
+  },
+  "snyk": true
 }
